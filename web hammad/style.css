@@ -1,0 +1,224 @@
+/* Define primary color variable (optional, adjust color code) */
+:root {
+    /* A teal-like color, adjust hex code as needed to match original image */
+    --bs-primary: #20c997;
+    --bs-primary-rgb: 32, 201, 151;
+    --bs-dark-color: #222; /* Dark color for footer */
+    --bs-light-gray: #f8f9fa; /* Light gray for sections */
+    --bs-footer-text: #aaa; /* Footer text color */
+}
+
+/* Apply primary color to Bootstrap components */
+.btn-primary {
+    --bs-btn-bg: var(--bs-primary);
+    --bs-btn-border-color: var(--bs-primary);
+    --bs-btn-hover-bg: #1baa80; /* Darker shade for hover */
+    --bs-btn-hover-border-color: #1baa80;
+    --bs-btn-active-bg: #1baa80;
+    --bs-btn-active-border-color: #179b77;
+    --bs-btn-color: #fff;
+}
+
+.btn-outline-primary {
+    --bs-btn-color: var(--bs-primary);
+    --bs-btn-border-color: var(--bs-primary);
+    --bs-btn-hover-bg: var(--bs-primary);
+    --bs-btn-hover-color: #fff;
+}
+
+.text-primary {
+    color: var(--bs-primary) !important;
+}
+
+a {
+    color: var(--bs-primary);
+    text-decoration: none;
+}
+
+a:hover {
+     color: #1baa80; /* Darker shade for hover */
+}
+
+/* Header */
+.top-bar {
+    font-size: 0.85rem;
+}
+
+.navbar-brand img {
+    max-height: 40px; /* Ensure logo height is constrained */
+}
+
+/* Hero Section Styling */
+.hero-section {
+    /* Couple looking at city view */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('img/Romantic\ Cityscape\ Dinner.jpeg');
+    background-size: cover;
+    background-position: center center; /* Center the image */
+    min-height: 550px; /* Adjust height */
+    position: relative;
+}
+
+.search-form {
+    background-color: rgba(255, 255, 255, 0.95); /* Slightly more opaque */
+}
+
+/* Section Title Styling */
+.section-title {
+    color: var(--bs-primary);
+    font-weight: bold;
+    position: relative;
+    padding-bottom: 10px;
+    margin-bottom: 40px; /* Increased space below title */
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: var(--bs-primary);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+}
+
+
+/* Property Card Styling */
+.property-card .card-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #333; /* Darker title color */
+}
+
+.property-card .card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.property-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+.property-card:hover {
+   transform: translateY(-5px); /* Slight lift on hover */
+   box-shadow: 0 8px 15px rgba(0,0,0,0.1); /* Add shadow on hover */
+}
+
+
+/* CTA Section Styling */
+.cta-section {
+    /* Modern building facade background */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1920');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.cta-section h3 {
+    font-weight: bold;
+}
+
+/* Meet Agents Section */
+.meet-agents {
+    background-color: var(--bs-light-gray); /* Use light gray background */
+}
+
+/* Agent Card Styling */
+.agent-card .card-img-top {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-top: -50px;
+    border: 5px solid #fff;
+    background-color: #eee; /* Fallback background */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Add subtle shadow to image */
+}
+
+.agent-card {
+    margin-top: 30px;
+    border: none; /* Remove card border */
+    background-color: #fff; /* Ensure card background is white */
+}
+
+.agent-card .card-body {
+    padding-top: 15px; /* Adjust padding */
+}
+
+.agent-card .social-icons a {
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+.agent-card .social-icons a:hover {
+    color: #179b77; /* Darker primary on hover */
+}
+
+
+/* Footer Styling */
+.footer-section {
+    background-color: var(--bs-dark-color);
+}
+
+.footer-heading {
+    color: #fff;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    font-weight: 600; /* Slightly bolder */
+}
+
+.footer-links li a {
+    color: var(--bs-footer-text);
+    font-size: 0.9rem;
+    padding: 4px 0; /* Slightly more padding */
+    display: inline-block;
+    transition: color 0.3s ease, padding-left 0.3s ease; /* Add transition */
+}
+
+.footer-links li a:hover {
+    color: #fff;
+    text-decoration: none; /* Remove underline */
+    padding-left: 5px; /* Indent on hover */
+}
+
+.footer-section p, .footer-section .small {
+     color: var(--bs-footer-text);
+     font-size: 0.9rem;
+}
+.footer-section .small i {
+    width: 16px; /* Align icons */
+    text-align: center;
+}
+
+.footer-section .social-icons a {
+     transition: color 0.3s ease;
+}
+.footer-section .social-icons a:hover {
+    color: #fff;
+}
+
+.footer-section .text-primary {
+     color: var(--bs-primary) !important;
+}
+
+.footer-section .d-flex img {
+    border-radius: 3px; /* Slightly rounded corners for thumbnails */
+}
+.footer-section .d-flex a {
+    font-size: 0.85rem; /* Smaller font for recent property links */
+    line-height: 1.3;
+    display: block; /* Make link take full width */
+    margin-bottom: 2px;
+    color: #fff; /* White link text */
+    transition: color 0.3s ease;
+}
+.footer-section .d-flex a:hover {
+    color: var(--bs-primary); /* Primary color on hover */
+}
+
+.sub-footer {
+    background-color: #111; /* Even darker sub-footer */
+    border-top: 1px solid #444 !important;
+}
+.sub-footer small {
+    font-size: 0.8rem; /* Smaller copyright text */
+}
